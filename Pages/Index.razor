@@ -1,0 +1,38 @@
+﻿@page "/"
+
+
+
+
+@using Microsoft.JSInterop
+
+
+
+
+<Chart Id="pie1" Type="@Chart.ChartType.Pie" Data="@avg" BackgroundColor="@(new[] { "Red", "Yellow", "Brown", "Indigo", "Blue" })" Labels="@testname"></Chart>
+
+
+
+<button @onclick="DrawChart">Get Chart</button>
+
+
+
+
+@code{
+
+    string[] avg;
+    string[] testname;
+
+    private void DrawChart()
+    {
+
+        avg=new[] { "10", "25", "35", "23", "7" };
+        testname = new[] { "Test1", "Test2", "Test3", "Test4", "Test5" };
+
+
+    }
+
+
+
+
+}
+
